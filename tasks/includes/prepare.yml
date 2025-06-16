@@ -2,6 +2,7 @@
   ansible.builtin.group:
     name: "{{ bitwarden_group }}"
     state: present
+  become: true
 
 - name: Ensure bitwarden user
   ansible.builtin.user:
@@ -12,6 +13,7 @@
     system: true
     home: "{{ bitwarden_user_home }}"
   register: user
+  become: true
 
 - name: Download bitwarden.sh for {{ bitwarden_script_version }}
   when: not bitwarden_test_install_script
@@ -22,3 +24,4 @@
     owner: "{{ bitwarden_user }}"
     group: "{{ bitwarden_group }}"
   notify: update bitwarden # Notify update when Bitwarden install has changed
+  become: true

@@ -20,6 +20,7 @@ bitwarden_install_inputs:
     (?i).+Do you want to use Let's Encrypt to generate a free SSL certificate?.+: "y"
     (?i).+email address.+: "{{ bitwarden_lets_encrypt_email }}"
     (?i).+database.+: "vault"
+    (?i).+Enter your region.+: "{{ bitwarden_region }}"
     (?i).+Enter your installation id.+: "{{ bitwarden_global_installation_id }}"
     (?i).+Enter your installation key.+: "{{ bitwarden_global_installation_key }}"
   generate:
@@ -28,6 +29,7 @@ bitwarden_install_inputs:
     (?i).+Enter the database name for your Bitwarden instance.+: "vault"
     (?i).+Enter your installation id.+: "{{ bitwarden_global_installation_id }}"
     (?i).+Enter your installation key.+: "{{ bitwarden_global_installation_key }}"
+    (?i).+Enter your region.+: "{{ bitwarden_region }}"
     (?i).+Do you have a SSL certificate to use?.+: "n"
     (?i).+Do you want to generate a self-signed SSL certificate?.+: "y"
   disable:
@@ -36,5 +38,6 @@ bitwarden_install_inputs:
     (?i).+Enter the database name for your Bitwarden instance.+: "vault"
     (?i).+Enter your installation id.+: "{{ bitwarden_global_installation_id }}"
     (?i).+Enter your installation key.+: "{{ bitwarden_global_installation_key }}"
+    (?i).+Enter your region.+: "{{ bitwarden_region }}"
     (?i).+Do you have a SSL certificate to use?.+: "n"
     (?i).+Do you want to generate a self-signed SSL certificate?.+: "n"

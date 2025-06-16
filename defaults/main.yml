@@ -1,6 +1,6 @@
 ---
 # @var bitwarden_domain_name:description: Github tagged version of Bitwarden install script to use. Note that this has a different version in the script than the tag.
-bitwarden_script_version: "v2023.12.0"
+bitwarden_script_version: "v2025.6.0"
 
 # @var bitwarden_domain_name:description: Domain name which used for Bitwarden
 bitwarden_domain_name: localhost
